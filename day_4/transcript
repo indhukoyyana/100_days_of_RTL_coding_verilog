@@ -1,0 +1,65 @@
+# Compile of logic_gates_using_gatelevel.v was successful.
+# Compile of logic_gates_using_gatelevel_tb.v failed with 2 errors.
+# Compile of logic_gates_using_gatelevel_tb.v failed with 1 errors.
+# Compile of logic_gates_using_gatelevel_tb.v failed with 14 errors.
+# Compile of logic_gates_using_gatelevel_tb.v was successful.
+vsim -gui work.logic_gates_using_gatelevel work.tb
+# vsim -gui work.logic_gates_using_gatelevel work.tb 
+# Start time: 15:21:43 on Jun 06,2025
+# Loading work.logic_gates_using_gatelevel
+# Loading work.tb
+add wave -position insertpoint sim:/logic_gates_using_gatelevel/*
+run
+# a=0b,b=1,and_y=0,or_y=1,not_y=0,xor_y=1b,xnor_y=0b,nand_y=1,nor_y=0
+# a=1b,b=0,and_y=0,or_y=1,not_y=1,xor_y=1b,xnor_y=0b,nand_y=1,nor_y=0
+# a=1b,b=1,and_y=x,or_y=1,not_y=0,xor_y=xb,xnor_y=xb,nand_y=x,nor_y=0
+run
+force -deposit sim:/logic_gates_using_gatelevel/a 0 0
+force -deposit sim:/logic_gates_using_gatelevel/b b 0
+# Invalid binary digit: b.
+# ** UI-Msg: (vsim-4011) Invalid force value: b 0.
+# 
+run
+force -deposit sim:/logic_gates_using_gatelevel/b 1 0
+run
+force -deposit sim:/logic_gates_using_gatelevel/a 1 0
+force -deposit sim:/logic_gates_using_gatelevel/b 0 0
+run
+force -deposit sim:/logic_gates_using_gatelevel/b 1 0
+run
+quit -sim
+# End time: 15:27:31 on Jun 06,2025, Elapsed time: 0:05:48
+# Errors: 0, Warnings: 10
+vsim -gui work.logic_gates_using_gatelevel work.tb
+# vsim -gui work.logic_gates_using_gatelevel work.tb 
+# Start time: 15:27:56 on Jun 06,2025
+# Loading work.logic_gates_using_gatelevel
+# Loading work.tb
+add wave -position insertpoint sim:/logic_gates_using_gatelevel/*
+force -deposit sim:/logic_gates_using_gatelevel/a 0 0
+force -deposit sim:/logic_gates_using_gatelevel/b 0 0
+run
+# a=0b,b=1,and_y=0,or_y=1,not_y=0,xor_y=1b,xnor_y=0b,nand_y=1,nor_y=0
+# a=1b,b=0,and_y=0,or_y=1,not_y=1,xor_y=1b,xnor_y=0b,nand_y=1,nor_y=0
+# a=1b,b=1,and_y=x,or_y=1,not_y=0,xor_y=xb,xnor_y=xb,nand_y=x,nor_y=0
+force -deposit sim:/logic_gates_using_gatelevel/b 1 0
+run
+force -deposit sim:/logic_gates_using_gatelevel/b 0 0
+force -deposit sim:/logic_gates_using_gatelevel/a 1 0
+run
+force -deposit sim:/logic_gates_using_gatelevel/b 1 0
+run
+force -deposit sim:/logic_gates_using_gatelevel/a 1 0
+run
+force -deposit sim:/logic_gates_using_gatelevel/b 0 0
+run
+force -deposit sim:/logic_gates_using_gatelevel/a 0 0
+run
+force -deposit sim:/logic_gates_using_gatelevel/b 1 0
+run
+force -deposit sim:/logic_gates_using_gatelevel/a 1 0
+run
+run
+quit -sim
+# End time: 15:35:41 on Jun 06,2025, Elapsed time: 0:07:45
+# Errors: 0, Warnings: 1
