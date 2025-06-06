@@ -1,0 +1,98 @@
+
+# Compile of half_adder_dv.v was successful.
+# Compile of half_adder_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.half_adder work.halfadder
+# vsim -gui work.half_adder work.halfadder 
+# Start time: 15:15:04 on Jun 05,2025
+# Loading work.half_adder
+# Loading work.halfadder
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'sum'.
+#    Time: 0 ps  Iteration: 0  Instance: /halfadder/u1 File: C:/Users/INDU/Desktop/verilog/100_days_of_RTL_coding_verilog/half_adder/half_adder_tb.v Line: 4
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'carry'.
+#    Time: 0 ps  Iteration: 0  Instance: /halfadder/u1 File: C:/Users/INDU/Desktop/verilog/100_days_of_RTL_coding_verilog/half_adder/half_adder_tb.v Line: 4
+# Error loading design
+# End time: 15:15:05 on Jun 05,2025, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 2
+vsim -gui work.half_adder work.halfadder
+# vsim -gui work.half_adder work.halfadder 
+# Start time: 15:17:24 on Jun 05,2025
+# Loading work.half_adder
+# Loading work.halfadder
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'sum'.
+#    Time: 0 ps  Iteration: 0  Instance: /halfadder/u1 File: C:/Users/INDU/Desktop/verilog/100_days_of_RTL_coding_verilog/half_adder/half_adder_tb.v Line: 4
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'carry'.
+#    Time: 0 ps  Iteration: 0  Instance: /halfadder/u1 File: C:/Users/INDU/Desktop/verilog/100_days_of_RTL_coding_verilog/half_adder/half_adder_tb.v Line: 4
+# Error loading design
+# End time: 15:17:24 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# Compile of half_adder_tb.v was successful.
+vsim -gui work.half_adder work.halfadder_tb
+# vsim -gui work.half_adder work.halfadder_tb 
+# Start time: 15:25:11 on Jun 05,2025
+# Loading work.half_adder
+# Loading work.halfadder_tb
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'sum'.
+#    Time: 0 ps  Iteration: 0  Instance: /halfadder_tb/u1 File: C:/Users/INDU/Desktop/verilog/100_days_of_RTL_coding_verilog/half_adder/half_adder_tb.v Line: 4
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'carry'.
+#    Time: 0 ps  Iteration: 0  Instance: /halfadder_tb/u1 File: C:/Users/INDU/Desktop/verilog/100_days_of_RTL_coding_verilog/half_adder/half_adder_tb.v Line: 4
+# Error loading design
+# End time: 15:25:11 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+# Compile of half_adder_tb.v was successful.
+vsim -gui work.half_adder work.halfadder_tb
+# vsim -gui work.half_adder work.halfadder_tb 
+# Start time: 15:28:37 on Jun 05,2025
+# Loading work.half_adder
+# Loading work.halfadder_tb
+add wave -position insertpoint sim:/half_adder/*
+run
+# a=0,b=0,sum=0,carry=0
+# a=0,b=1,sum=1,carry=0
+# a=1,b=0,sum=1,carry=0
+# a=1,b=1,sum=0,carry=1
+add wave -position insertpoint sim:/half_adder/*
+add wave -position insertpoint sim:/half_adder/#ASSIGN#4/*
+# ** UI-Msg: (vish-4014) No objects found matching '/half_adder/#ASSIGN#4/*'.
+add wave -position insertpoint sim:/half_adder/#ASSIGN#4/*
+# ** UI-Msg: (vish-4014) No objects found matching '/half_adder/#ASSIGN#4/*'.
+add wave -position insertpoint sim:/half_adder/#ASSIGN#4/*
+# ** UI-Msg: (vish-4014) No objects found matching '/half_adder/#ASSIGN#4/*'.
+quit -sim
+# End time: 15:30:38 on Jun 05,2025, Elapsed time: 0:02:01
+# Errors: 0, Warnings: 2
+vsim -gui work.half_adder work.halfadder_tb
+# vsim -gui work.half_adder work.halfadder_tb 
+# Start time: 15:30:58 on Jun 05,2025
+# Loading work.half_adder
+# Loading work.halfadder_tb
+add wave -position insertpoint sim:/half_adder/*
+force -deposit sim:/half_adder/a 0 0
+force -deposit sim:/half_adder/b 0 0
+run
+# a=0,b=0,sum=0,carry=0
+# a=0,b=1,sum=1,carry=0
+# a=1,b=0,sum=1,carry=0
+# a=1,b=1,sum=0,carry=1
+force -deposit sim:/half_adder/b 1 0
+run
+force -freeze sim:/half_adder/b 0 0
+force -deposit sim:/half_adder/a 1 0
+force -deposit sim:/half_adder/b {} 0
+run
+force -deposit sim:/half_adder/b 1 0
+run
+force -freeze sim:/half_adder/b 0 0
+force -freeze sim:/half_adder/a 0 0
+run
+force -deposit sim:/half_adder/a 1 0
+run
+force -deposit sim:/half_adder/a 0 0
+force -deposit sim:/half_adder/b 1 0
+run
+force -deposit sim:/half_adder/a 1 0
+run
+run
+quit -sim
+# End time: 15:37:17 on Jun 05,2025, Elapsed time: 0:06:19
+# Errors: 0, Warnings: 1
